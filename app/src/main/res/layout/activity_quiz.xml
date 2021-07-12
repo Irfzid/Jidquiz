@@ -117,6 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="question"
+                android:textSize="18sp"
                 android:textAlignment="gravity"
                 android:layout_centerInParent="true"/>
 
@@ -213,6 +214,7 @@
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
             android:textAlignment="center"
+            android:textSize="18sp"
             android:text="RadioButton" />
 
         <RadioButton
@@ -222,6 +224,7 @@
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
             android:textAlignment="center"
+            android:textSize="18sp"
             android:text="RadioButton" />
 
         <RadioButton
@@ -231,6 +234,7 @@
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
             android:textAlignment="center"
+            android:textSize="18sp"
             android:text="RadioButton" />
 
         <RadioButton
@@ -240,6 +244,7 @@
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
             android:textAlignment="center"
+            android:textSize="18sp"
             android:text="RadioButton" />
     </RadioGroup>
 

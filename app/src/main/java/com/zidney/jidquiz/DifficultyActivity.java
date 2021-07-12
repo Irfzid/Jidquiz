@@ -68,7 +68,7 @@ public class DifficultyActivity extends AppCompatActivity {
     private String DisplayCategory(){
         if(category == 9)
         {
-            kategori = "General Knowloge";
+            kategori = "General Knowledge";
         }
         if (category == 11)
         {

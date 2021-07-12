@@ -35,7 +35,8 @@ import retrofit2.Response;
 public class QuizActivity extends AppCompatActivity {
 
     private final String TAG = "QuizActivity";
-    private static final long COUNTDOWN_IN_MILIS = 15000;
+    private static final long COUNTDOWN_IN_MILIS = 30000;
+    private static final String EXTRA_SCORE = "extrascore";
 
     private List<Results> resultsList;
     private ResultsModel resultsModels;
@@ -80,8 +81,6 @@ public class QuizActivity extends AppCompatActivity {
         btn_next = findViewById(R.id.btn_next);
 
 
-//        int selectedId = rg_ans.getCheckedRadioButtonId();
-//        answer = findViewById(selectedId);
 
         Intent mIntent = getIntent();
         category = mIntent.getIntExtra("CATEGORY", 0);
@@ -93,7 +92,7 @@ public class QuizActivity extends AppCompatActivity {
         btn_next.setText("Confirm");
 
         getQuizGK();
-//        Log.d(TAG, "onCreate: " + answer4);
+
 
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,7 +162,7 @@ public class QuizActivity extends AppCompatActivity {
         String kategori = null;
         if(category == 9)
         {
-            kategori = "General Knowloge";
+            kategori = "General Knowledge";
         }
         if (category == 11)
         {
@@ -249,7 +248,7 @@ public class QuizActivity extends AppCompatActivity {
 //            StartCountDown();
 
         }else {
-            finishQuiz();
+            finishQuiz(score, category);
         }
     }
 
@@ -277,15 +276,18 @@ public class QuizActivity extends AppCompatActivity {
         String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         tv_time.setText(timeFormatted);
         if (timeleft < 10000) {
-            Toast.makeText(QuizActivity.this,"Please select the answer or application will crash :(", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(QuizActivity.this,"Please select the answer or application will crash :(", Toast.LENGTH_SHORT).show();
             tv_time.setTextColor(Color.RED);
         } else {
             tv_time.setTextColor(TCdefaulttime);
         }
     }
 
-    private void finishQuiz(){
-        finish();
+    private void finishQuiz(int hiscore, int category){
+        Intent scoreIntent = new Intent(QuizActivity.this, HighscoreActivity.class);
+        scoreIntent.putExtra("HISCORE", hiscore);
+        scoreIntent.putExtra("HICATEGORY", category);
+        startActivity(scoreIntent);
     }
 
     @Override
