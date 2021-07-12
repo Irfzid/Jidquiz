@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JIDQUIZ"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textSize="16sp"
+        android:text="My High Score:"/>
+
+    <Button
+        android:id="@+id/btn_GK"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="240dp"
+        android:text="General Knowlegde"
+        android:drawableTop="@drawable/ic_knowledge"
+        />
+
+    <Button
+        android:id="@+id/btn_film"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="240dp"
+        android:text="Film"
+        android:drawableTop="@drawable/ic_clapperboard"/>
+
+    <Button
+        android:id="@+id/btn_sn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="410dp"
+        android:text="Science Nature"
+        android:drawableTop="@drawable/ic_genetic"/>
+
+    <Button
+        android:id="@+id/btn_myth"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="410dp"
+        android:text="Mythology"
+        android:drawableTop="@drawable/ic_trident"/>
+
+</RelativeLayout>
