@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Lapis"
     tools:context=".QuizActivity">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView12"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,7 +34,9 @@
                 android:layout_height="wrap_content"
                 tools:text="score"
                 android:layout_centerInParent="true"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
         </RelativeLayout>
 
 
@@ -39,16 +44,15 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView14"
-        android:layout_width="136dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView11"
+        android:layout_width="240dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/Lapis"
+        app:layout_constraintBottom_toTopOf="@+id/cardView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView10"
-        app:layout_constraintVertical_bias="0.2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,10 +63,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:text="category"
-                android:textStyle="bold"/>
+                android:textColor="@color/white"/>
         </RelativeLayout>
-
 
 
     </androidx.cardview.widget.CardView>
@@ -70,9 +75,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView11"
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -90,6 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 tools:text="difficulty"
+                android:textSize="18sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"/>
 
         </RelativeLayout>
@@ -101,8 +109,10 @@
         android:id="@+id/cardView9"
         android:layout_width="371dp"
         android:layout_height="162dp"
-        android:layout_marginTop="128dp"
-        app:cardBackgroundColor="#D3D3D3"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="18dp"
+        android:backgroundTint="@color/frost"
+        app:layout_constraintBottom_toTopOf="@+id/rg_answer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -116,10 +126,11 @@
                 android:id="@+id/tv_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:text="question"
+                android:textAlignment="center"
                 android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:layout_centerInParent="true"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -138,18 +149,17 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView10"
-        android:layout_width="136dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="126dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintStart_toStartOf="parent">
 
         <RelativeLayout
-            android:layout_width="137dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
@@ -157,8 +167,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 tools:text="Time "
-                android:textStyle="bold"/>
+                android:textColor="@color/white"/>
         </RelativeLayout>
 
 
@@ -167,11 +179,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView13"
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toStartOf="@+id/cardView11"
+        android:backgroundTint="@color/Lapis"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -187,6 +200,8 @@
                 android:layout_height="wrap_content"
                 tools:text="Quiz 1/10"
                 android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
                 android:layout_centerInParent="true"/>
 
         </RelativeLayout>
@@ -197,55 +212,55 @@
     <RadioGroup
         android:id="@+id/rg_answer"
         android:layout_width="370dp"
-        android:layout_height="274dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView9"
-        app:layout_constraintVertical_bias="0.275">
+        app:layout_constraintVertical_bias="1.0">
 
         <RadioButton
             android:id="@+id/rb_ans1"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
+            android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:text="RadioButton" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb_ans2"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
+            android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:text="RadioButton" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb_ans3"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
+            android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:text="RadioButton" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb_ans4"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
+            android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:text="RadioButton" />
+            android:textSize="18sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

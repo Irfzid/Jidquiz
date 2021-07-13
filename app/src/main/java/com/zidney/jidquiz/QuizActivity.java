@@ -188,13 +188,21 @@ public class QuizActivity extends AppCompatActivity {
 //        Log.d(TAG, "CheckAnswers: " + answer.getText().toString());
 //        Log.d(TAG, "CheckAnswers: " + answer4);
 
+
         Log.d(TAG, "CheckAnswers: " + answer);
 
        if(answer != null){
            if(answer4.equals(answer.getText().toString())){
-               score++;
+               if(timeleft > 20000 ){
+                   score += 3;
+               }
+               else if(timeleft > 10000 && timeleft <= 20000){
+                   score += 2;
+               }else{
+                   score += 1;
+               }
                tv_score.setText("score: "+ score);
-//            Log.d(TAG, "onCreate: score" + score);
+            Log.d(TAG, "onCreate: score" + score);
            }
        }
        showSolution();

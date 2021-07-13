@@ -93,4 +93,9 @@ public class HighscoreActivity extends AppCompatActivity {
         hiscore = prefs.getInt(KEY_HIGHSCORE, 0);
         tv_Hiscore.setText(Integer.toString(hiscore));
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
