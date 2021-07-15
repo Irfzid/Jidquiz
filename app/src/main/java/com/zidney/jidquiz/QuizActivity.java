@@ -47,7 +47,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private int score;
     private int counter, category;
-    private int quiztotal = 40;
+    private int quiztotal = 25;
 
     private String difficulty;
     private String tokentrivia;
