@@ -11,11 +11,12 @@
         android:id="@+id/cardView"
         android:layout_width="365dp"
         android:layout_height="365dp"
-        android:layout_marginBottom="160dp"
         android:backgroundTint="@color/Aero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -28,8 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="SCORE"
-                android:textSize="30dp"
                 android:textColor="@color/white"
+                android:textSize="30dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -39,9 +40,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:text="00"
+                android:textColor="@color/white"
                 android:textSize="60sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,9 +50,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="170dp"
                 android:text="HIGH SCORE"
+                android:textColor="@color/white"
                 android:textSize="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_hiscore1"
@@ -60,9 +61,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="220dp"
                 android:text="00"
+                android:textColor="@color/white"
                 android:textSize="60sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -85,30 +86,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.451" />
 
-    <Button
-        android:id="@+id/btn_mainmenu"
-        android:layout_width="149dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="60dp"
-        android:text="Main Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_replay"
-        app:layout_constraintHorizontal_bias="0.309"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.026" />
 
-    <Button
-        android:id="@+id/btn_replay"
-        android:layout_width="149dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="28dp"
-        android:text="Play Again"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset"
+        app:layout_constraintVertical_bias="0.54">
+
+        <Button
+            android:id="@+id/btn_mainmenu"
+            android:layout_width="149dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="25dp"
+            android:text="Main Menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_replay"
+            app:layout_constraintHorizontal_bias="0.309"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.026" />
+
+        <Button
+            android:id="@+id/btn_replay"
+            android:layout_width="149dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:text="Play Again"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.025" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_reset"
@@ -120,5 +135,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.107" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,33 +10,30 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView12"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="41dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginBottom="7dp"
         android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/cardView11"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="41dp">
 
             <TextView
                 android:id="@+id/tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="score"
                 android:layout_centerInParent="true"
-                android:textStyle="bold"
+                android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textColor="@color/white"/>
+                android:textStyle="bold"
+                android:text="score:" />
         </RelativeLayout>
 
 
@@ -107,15 +104,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView9"
-        android:layout_width="371dp"
-        android:layout_height="162dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginBottom="18dp"
+        android:layout_width="350dp"
+        android:layout_height="182dp"
         android:backgroundTint="@color/frost"
-        app:layout_constraintBottom_toTopOf="@+id/rg_answer"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -138,8 +134,8 @@
 
     <Button
         android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,11 +194,11 @@
                 android:id="@+id/tv_amountquest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Quiz 1/10"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                android:layout_centerInParent="true"
                 android:textColor="@color/white"
-                android:layout_centerInParent="true"/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Quiz 1/10" />
 
         </RelativeLayout>
 
@@ -215,12 +211,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="72dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView9"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.272">
 
         <RadioButton
             android:id="@+id/rb_ans1"
