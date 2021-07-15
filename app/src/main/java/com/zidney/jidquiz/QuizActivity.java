@@ -47,13 +47,15 @@ public class QuizActivity extends AppCompatActivity {
 
     private int score;
     private int counter, category;
-    private int quiztotal = 10;
+    private int quiztotal = 40;
 
     private String difficulty;
+    private String tokentrivia;
     private String answer1,answer2,answer3,answer4;
 
     private boolean answered;
     private long timeleft;
+    private long backpressed;
     private CountDownTimer countDownTimer;
 
     private ColorStateList TCdefaulttime;
@@ -81,10 +83,11 @@ public class QuizActivity extends AppCompatActivity {
         btn_next = findViewById(R.id.btn_next);
 
 
-
         Intent mIntent = getIntent();
         category = mIntent.getIntExtra("CATEGORY", 0);
         difficulty = mIntent.getStringExtra("DIFFICULTY");
+        tokentrivia = mIntent.getStringExtra("TOKEN_TRIVIA");
+
         Log.d(TAG, "onCreate: "+ category + difficulty);
 
         tv_difficulty.setText(difficulty);
@@ -113,7 +116,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
     private void getQuizGK(){
-        Call<ResultsModel> Call = apiEndpoint.getTriviaQuiz(1, category, difficulty, "multiple");
+        Call<ResultsModel> Call = apiEndpoint.getTriviaQuiz(1, category, difficulty, "multiple", tokentrivia);
         Call.enqueue(new Callback<ResultsModel>() {
             @Override
             public void onResponse(Call<ResultsModel> call, Response<ResultsModel> response) {
@@ -142,9 +145,6 @@ public class QuizActivity extends AppCompatActivity {
                 Log.d(TAG, "onResponse: "+ answer4);
                 //Log.d(TAG, "onResponse: " + answer.getText());
 
-
-
-
             }
 
             @Override
@@ -171,8 +171,8 @@ public class QuizActivity extends AppCompatActivity {
         if(category == 17){
             kategori = "Science & Nature";
         }
-        if(category == 20){
-            kategori = "Mythology";
+        if(category == 22){
+            kategori = "Geography";
         }
         return kategori;
     }
@@ -304,5 +304,15 @@ public class QuizActivity extends AppCompatActivity {
         if(countDownTimer != null){
             countDownTimer.cancel();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backpressed + 2000 > System.currentTimeMillis()){
+            finishQuiz(score, category);
+        } else {
+            Toast.makeText(this, "Press back again to finish Quiz", Toast.LENGTH_SHORT).show();
+        }
+        backpressed = System.currentTimeMillis();
     }
 }

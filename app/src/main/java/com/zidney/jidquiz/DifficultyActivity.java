@@ -14,6 +14,7 @@ public class DifficultyActivity extends AppCompatActivity {
     private Button btn_easy, btn_medium, btn_hard;
     private TextView tv_category;
     private int category;
+    private String tokentrivia;
     private String kategori;
     private static final String TAG = "DifficultyActivity";
 
@@ -29,7 +30,8 @@ public class DifficultyActivity extends AppCompatActivity {
 
         Intent mIntent = getIntent();
         category = mIntent.getIntExtra("CATEGORY", 0);
-        Log.d(TAG, "onCreate: "+ category);
+        tokentrivia = mIntent.getStringExtra("TOKEN_TRIVIA");
+        Log.d(TAG, "onCreate: Category "+ category + " Token anda " + tokentrivia);
 
         tv_category.setText(DisplayCategory());
 
@@ -38,30 +40,31 @@ public class DifficultyActivity extends AppCompatActivity {
         btn_easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQuiz("easy",category);
+                startQuiz("easy",category, tokentrivia);
             }
         });
 
         btn_medium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQuiz("medium", category);
+                startQuiz("medium", category, tokentrivia);
             }
         });
 
         btn_hard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQuiz("hard", category);
+                startQuiz("hard", category, tokentrivia);
             }
         });
 
     }
 
-    private void startQuiz(String difficulty, int category) {
+    private void startQuiz(String difficulty, int category, String tokentrivia) {
         Intent intent = new Intent(DifficultyActivity.this, QuizActivity.class);
         intent.putExtra("CATEGORY", category);
         intent.putExtra("DIFFICULTY", difficulty);
+        intent.putExtra("TOKEN_TRIVIA", tokentrivia);
         startActivity(intent);
     }
 
@@ -77,8 +80,8 @@ public class DifficultyActivity extends AppCompatActivity {
         if(category == 17){
             kategori = "Science & Nature";
         }
-        if(category == 20){
-            kategori = "Mythology";
+        if(category == 22){
+            kategori = "Geography";
         }
         return kategori;
     }

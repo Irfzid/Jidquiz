@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="41dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="3dp"
         android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,17 +23,17 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tv_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:text="score:"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="score:" />
+                android:textStyle="bold" />
         </RelativeLayout>
 
 
@@ -43,13 +43,14 @@
         android:id="@+id/cardView14"
         android:layout_width="240dp"
         android:layout_height="46dp"
+        android:layout_marginBottom="5dp"
         android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714">
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,10 +61,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                tools:text="category"
-                android:textColor="@color/white"/>
+                tools:text="category" />
         </RelativeLayout>
 
 
@@ -74,7 +75,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
         android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,10 +93,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                tools:text="difficulty"
-                android:textSize="18sp"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="difficulty" />
 
         </RelativeLayout>
 
@@ -106,12 +107,14 @@
         android:id="@+id/cardView9"
         android:layout_width="350dp"
         android:layout_height="182dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/frost"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rg_answer"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277">
+        app:layout_constraintVertical_bias="0.878">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -123,7 +126,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="question"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -136,7 +138,7 @@
         android:id="@+id/btn_next"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,12 +149,14 @@
         android:id="@+id/cardView10"
         android:layout_width="126dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -163,10 +167,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textStyle="bold"
+                android:textColor="@color/white"
                 android:textSize="20sp"
-                tools:text="Time "
-                android:textColor="@color/white"/>
+                android:textStyle="bold"
+                tools:text="Time " />
         </RelativeLayout>
 
 
@@ -177,10 +181,10 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/Lapis"
         app:layout_constraintBottom_toTopOf="@+id/cardView9"
         app:layout_constraintEnd_toStartOf="@+id/cardView11"
-        android:backgroundTint="@color/Lapis"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -195,10 +199,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:text="Quiz 1/10"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="Quiz 1/10" />
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -209,15 +213,12 @@
         android:id="@+id/rg_answer"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="10dp"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView9"
-        app:layout_constraintVertical_bias="0.272">
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rb_ans1"
@@ -225,7 +226,6 @@
             android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
-            android:text="RadioButton"
             android:textAlignment="center"
             android:textSize="18sp" />
 
@@ -235,7 +235,6 @@
             android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
-            android:text="RadioButton"
             android:textAlignment="center"
             android:textSize="18sp" />
 
@@ -245,7 +244,6 @@
             android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
-            android:text="RadioButton"
             android:textAlignment="center"
             android:textSize="18sp" />
 
@@ -255,7 +253,6 @@
             android:layout_height="58dp"
             android:background="@drawable/radio_flat_selector"
             android:button="@android:color/transparent"
-            android:text="RadioButton"
             android:textAlignment="center"
             android:textSize="18sp" />
     </RadioGroup>
