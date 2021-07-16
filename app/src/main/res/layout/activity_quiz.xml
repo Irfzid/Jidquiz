@@ -7,6 +7,11 @@
     android:background="@color/Lapis"
     tools:context=".QuizActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg1"/>
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView12"
@@ -30,8 +35,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="score:"
-                android:textColor="@color/white"
+                android:text="Score:"
+                android:textColor="@color/cream"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -61,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 tools:text="category" />
@@ -93,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="difficulty" />
@@ -140,6 +145,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="12dp"
         android:text="Next"
+        android:textColor="@color/cream"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -167,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="Time " />
@@ -200,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Quiz 1/10"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

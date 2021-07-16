@@ -7,6 +7,11 @@
     android:background="@color/Lapis"
     tools:context=".HighscoreActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg1"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="365dp"
@@ -29,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="SCORE"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -40,7 +45,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:text="00"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="60sp"
                 android:textStyle="bold" />
 
@@ -50,7 +55,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="170dp"
                 android:text="HIGH SCORE"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -61,7 +66,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="220dp"
                 android:text="00"
-                android:textColor="@color/white"
+                android:textColor="@color/cream"
                 android:textSize="60sp"
                 android:textStyle="bold" />
 
@@ -71,14 +76,14 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_endword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="JIDQUIZ"
         android:textAlignment="center"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/cream"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -105,6 +110,7 @@
             android:layout_height="56dp"
             android:layout_marginRight="25dp"
             android:text="Main Menu"
+            android:textColor="@color/cream"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_replay"
             app:layout_constraintHorizontal_bias="0.309"
@@ -118,6 +124,7 @@
             android:layout_height="56dp"
             android:layout_marginLeft="20dp"
             android:text="Play Again"
+            android:textColor="@color/cream"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView"
@@ -130,6 +137,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
+        android:textColor="@color/cream"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

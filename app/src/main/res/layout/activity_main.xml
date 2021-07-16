@@ -7,28 +7,30 @@
     android:background="@color/Lapis"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg1"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="JIDQUIZ"
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="50sp"
-            android:textColor="@color/white" />
+            android:src="@drawable/transpant_logo"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/cream"
             android:textStyle="bold"
             android:text="Let's play!"/>
 
@@ -36,9 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="25dp"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/cream"
             android:textStyle="bold"
             android:text="Choose the category"/>
 
@@ -59,6 +61,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="General Knowlegde"
+            android:textColor="@color/cream"
             android:drawableTop="@drawable/ic_knowledge"
             />
 
@@ -68,6 +71,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="20dp"
             android:text="Film"
+            android:textColor="@color/cream"
             android:drawableTop="@drawable/ic_clapperboard"/>
 
 
@@ -84,6 +88,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="Science Nature"
+            android:textColor="@color/cream"
             android:drawableTop="@drawable/ic_genetic"/>
 
         <Button
@@ -92,6 +97,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="20dp"
             android:text="Geography"
+            android:textColor="@color/cream"
             android:drawableTop="@drawable/ic_globe"/>
 
     </LinearLayout>

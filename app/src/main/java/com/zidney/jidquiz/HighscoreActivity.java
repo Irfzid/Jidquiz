@@ -17,8 +17,9 @@ public class HighscoreActivity extends AppCompatActivity {
     private static final String KEY_HIGHSCORE = "keyhighscore";
 
     private Button btn_mainmenu, btn_replay, btn_reset;
-    private TextView tv_Hiscore, tv_finalscore;
+    private TextView tv_Hiscore, tv_finalscore, tv_endword;
     int hiscore, hicategory, Finalscore;
+    private String kata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +31,15 @@ public class HighscoreActivity extends AppCompatActivity {
         tv_finalscore = findViewById(R.id.tv_hiscore);
         tv_Hiscore = findViewById(R.id.tv_hiscore1);
         btn_reset = findViewById(R.id.btn_reset);
+        tv_endword = findViewById(R.id.tv_endword);
 
         Intent hIntent = getIntent();
         Finalscore = hIntent.getIntExtra("HISCORE", 0);
         hicategory = hIntent.getIntExtra("HICATEGORY", 0);
 
+        Log.d(TAG, "onCreate: score akhir " + Finalscore);
         tv_finalscore.setText(Integer.toString(Finalscore));
+        tv_endword.setText(DisplayEndword());
 
         loadHighscore();
         highscore();
@@ -92,6 +96,22 @@ public class HighscoreActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         hiscore = prefs.getInt(KEY_HIGHSCORE, 0);
         tv_Hiscore.setText(Integer.toString(hiscore));
+    }
+
+    private String DisplayEndword(){
+        if(Finalscore == 75){
+            kata = "PERFECT!";
+        }
+        else if(Finalscore <= 50 && Finalscore >= 25){
+            kata = "GREAT!";
+        }
+        else if(Finalscore <= 25 && Finalscore > 0){
+            kata = "NOT BAD!";
+        }
+        else if(Finalscore == 0){
+            kata = "WOW";
+        }
+        return kata;
     }
 
     @Override
