@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_GK, btn_film, btn_sn, btn_geo;
     private String tokentrivia;
+    private MediaPlayer mediaPlayer;
     private static final String TAG = "MainActivity";
     ApiEndpoint apiEndpoint = ApiService.getClient().create(ApiEndpoint.class);
 
@@ -29,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
 
         btn_GK = findViewById(R.id.btn_GK);
         btn_film = findViewById(R.id.btn_film);
@@ -104,4 +108,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

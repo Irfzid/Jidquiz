@@ -109,7 +109,7 @@ public class HighscoreActivity extends AppCompatActivity {
             kata = "NOT BAD!";
         }
         else if(Finalscore == 0){
-            kata = "WOW";
+            kata = "WELL..";
         }
         return kata;
     }

@@ -207,7 +207,7 @@
                 android:layout_centerInParent="true"
                 android:text="Quiz 1/10"
                 android:textColor="@color/cream"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
