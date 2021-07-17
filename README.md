@@ -4,3 +4,7 @@ JIDQUIZ is an application where users are given trivia questions about general k
 
 ## Advance topic
 I use REST API to fetch the quiz from openTriviadb
+
+## Playstore 
+
+https://play.google.com/store/apps/details?id=com.zidney.jidquiz
